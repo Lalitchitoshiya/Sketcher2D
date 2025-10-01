@@ -10,6 +10,7 @@
         "main.cpp",
         "Point.cpp",
         "Line.cpp",
+        "Rectangle.cpp",
         "fileWrite.cpp",
         "-o",
         "shapes"
