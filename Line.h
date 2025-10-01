@@ -11,5 +11,5 @@ class Line {
 
         Line(Point p1, Point p2);
         
-        vector<Point> getCoords();
+        vector<double> getCoords();
 };

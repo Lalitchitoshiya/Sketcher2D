@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Shapes Project",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",                // <-- add this (debug info)
+        "main.cpp",
+        "Point.cpp",
+        "Line.cpp",
+        "fileWrite.cpp",
+        "-o",
+        "shapes"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

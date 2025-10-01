@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Shapes Project",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/shapes",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "preLaunchTask": "Build Shapes Project"
+    }
+  ]
+}
