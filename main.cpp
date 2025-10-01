@@ -1,7 +1,10 @@
+
+
 #include <iostream>
 #include <string>
 #include "point.h"
 #include "shape.h"
+#include "triangle.h"
 #include "filewrite.h"
 
 
@@ -37,11 +40,37 @@ void getShapeChoice() {
 
 
     } 
+    else if (choice == "triangle") {
+        point p1, p2, p3;
+
+        std::cout << "Enter coordinates for Point 1 (x y): ";
+        std::cin >> p1.x >> p1.y;
+
+        std::cout << "Enter coordinates for Point 2 (x y): ";
+        std::cin >> p2.x >> p2.y;
+
+        std::cout << "Enter coordinates for Point 3 (x y): ";
+        std::cin >> p3.x >> p3.y;
+
+        std::cout << "You entered Triangle with points: \n";
+        std::cout << "P1(" << p1.x << ", " << p1.y << ")\n";
+        std::cout << "P2(" << p2.x << ", " << p2.y << ")\n";
+        std::cout << "P3(" << p3.x << ", " << p3.y << ")\n";
+        std::vector<point> t;
+        t.push_back(p1);
+        t.push_back(p2);
+        t.push_back(p3);
+        FileWrite f1;
+        f1.write(t);
+    } 
     
 }
 
-int main() { 
+
+
+int main() {
     getShapeChoice();    
     return 0;
     
+
 }
