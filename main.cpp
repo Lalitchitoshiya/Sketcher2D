@@ -6,6 +6,7 @@
 #include "shape.h"
 #include "triangle.h"
 #include "filewrite.h"
+#include "circle.h"
 
 
 void getShapeChoice() {
@@ -64,6 +65,32 @@ void getShapeChoice() {
         f1.write(t);
     } 
     
+    else if (choice == "circle") {
+        double cx, cy, r;
+        int resolution;
+
+        std::cout << "Enter center coordinates (x y): ";
+        std::cin >> cx >> cy;
+        std::cout << "Enter radius: ";
+        std::cin >> r;
+        std::cout << "Enter resolution (e.g., 36 for 10-degree steps): ";
+        std::cin >> resolution;
+
+        point center(cx, cy);
+        circle c(center, r, resolution);
+
+        std::cout << "Circle Points:\n";
+        const auto& pts = c.getPoints();
+        for (const auto& p : pts) {
+            std::cout << "(" << p.x << ", " << p.y << ")\n";
+        }
+
+        FileWrite f1;
+        f1.write(pts);
+    }
+
+
+     
 }
 
 

@@ -8,5 +8,5 @@ class point {
     public :
     point(double a, double b);
     point ();   //constructor call
-
+ 
 };
