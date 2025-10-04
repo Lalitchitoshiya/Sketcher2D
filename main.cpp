@@ -2,6 +2,7 @@
 #include "Point.h"
 #include "Line.h"
 #include "Rectangle.h"
+#include "Square.h"
 #include "fileWrite.h"
 #include <vector>
 using namespace std;
@@ -11,6 +12,7 @@ int main() {
     cout<< "Enter 1 for line" << endl;
     cout<< "Enter 2 for rectangle (with 2 point)" << endl;
     cout<< "Enter 3 for rectangle (with 1 point, length and width)" << endl;
+    cout<< "Enter 4 for square (with 1 point and side)" << endl;
     cin>> n;
 
     switch(n){
@@ -82,8 +84,29 @@ int main() {
             break;
         }
 
+        case(4):{
+            double x1,y1,s;
+
+            cout<< "You have to enter 1 Point and side" << endl;
+            cout<< "enter x1" << endl;
+            cin>> x1;
+            cout<< "enter y1" << endl;
+            cin>> y1;
+            cout<< "enter side" << endl;
+            cin>> s;
+            
+            Point P1(x1, y1);
+
+            Square S(P1,s);
+
+            vector<double>p = S.getCoords();
+            fileWrite fw;
+            fw.write(p);
+            break;
+        }
+
         default:{
-            std::cout << "Invalid choice. Please enter a number between 1 and 3." << std::endl;
+            std::cout << "Invalid choice. Please enter a number between 1 and 4." << std::endl;
             break;
         }
     }

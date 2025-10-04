@@ -11,6 +11,7 @@
         "Point.cpp",
         "Line.cpp",
         "Rectangle.cpp",
+        "Square.cpp",
         "fileWrite.cpp",
         "-o",
         "shapes"
