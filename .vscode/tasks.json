@@ -12,10 +12,13 @@
         "Line.cpp",
         "Rectangle.cpp",
         "Square.cpp",
+        "Triangle.cpp",
+        "Circle.cpp",
         "fileWrite.cpp",
         "-o",
         "shapes"
-      ],
+      ], 
+    
       "group": {
         "kind": "build",
         "isDefault": true
